@@ -23,9 +23,13 @@ export default {
   destroyed() {
     console.log('destroyed')
   },
+  //这两个函数，只有该组件被保持了状态使用了keep-alive时，才有效
   activated() {
-    // console.log('activated');
+    console.log('activated');
     this.$router.push(this.path)
+  },
+  deactivated() {
+    console.log('deactivated');
   },
   beforeRouteLeave(to,from,next) {
     console.log(this.$route.path);

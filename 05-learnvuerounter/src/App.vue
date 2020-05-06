@@ -13,7 +13,7 @@
     <router-link :to="{path:'/profile',query:{name:'why',age:18,height:'180'}}">档案</router-link>-->
     <button @click="userClick">用户</button>
     <button @click="profileClick">档案</button>
-    <keep-alive>
+    <keep-alive exclude="Profile,User">//不能加空格
       <router-view />
     </keep-alive>
   </div>

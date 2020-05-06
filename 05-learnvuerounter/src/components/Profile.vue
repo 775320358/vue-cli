@@ -8,10 +8,15 @@
 
 <script>
 export default {
-  name:'User',
+  name: 'User',
+  created() {
+    console.log('profile created')
+  },
+  destroyed() {
+    console.log('profile destroyed')
+  }
 }
 </script>
 
 <style scoped>
-
 </style>
